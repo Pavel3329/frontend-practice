@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- Регистрация нового пользователя -->
+    <form class="registration">
+      <label for="user-name">Имя</label>
+      <input class="name" id="user-name" type="text" />
+      <br />
+
+      <label for="user-phone">Телефон</label>
+      <input class="phone" id="user-phone" type="text" />
+      <br />
+
+      <label for="user-email">Email</label>
+      <input class="email" id="user-email" type="text" />
+      <br />
+
+      <label for="user-password">Пароль</label>
+      <input class="password" id="user-password" type="password" />
+      <br />
+
+      <button class="signup" type="submit">Зарегистрироваться</button>
+    </form>
+
+    <!-- Вход уже зарегистрированного пользователя -->
+    <form class="login">
+      <label for="login-email">Email</label>
+      <input class="login-email" id="login-email" type="text" />
+      <br />
+
+      <label for="login-password">Пароль</label>
+      <input class="login-password" id="login-password" type="password" />
+      <br />
+
+      <button class="login-btn" type="submit">Войти</button>
+    </form>
+
+    <!-- Общее сообщение для обеих форм -->
+    <p class="message"></p>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
+
+<!-- Реализовать формы регистрации и логина. 
+
+Данные зарегистрированных пользователей хранить в массиве объектов в localStorage. 
+Для обеих форм сделать проверку на пустые поля при отправке. 
+При вводе неверного логина или пароля выводить сообщение об ошибке. 
+При успешном логине и регистрации выводит сообщение и очищать поля. -->
