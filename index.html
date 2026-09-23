@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main class="album-app">
+      <h1>Album Search</h1>
+      <p class="album-app__description">Find an album by its ID</p>
+
+      <form class="search-form" id="searchAlbumForm">
+        <label class="search-form__label" for="albumId"> Enter album ID </label>
+
+        <div class="search-form__row">
+          <input
+            type="number"
+            class="search-form__input"
+            id="albumId"
+            name="albumId"
+            min="1"
+            max="100"
+            placeholder="For example, 12"
+            required
+          />
+
+          <button class="search-form__button" type="submit">Search</button>
+        </div>
+
+        <p class="search-form__hint">Try an ID from 1 to 100</p>
+      </form>
+
+      <section class="album-container" aria-live="polite">
+        <p class="album-container__empty">
+          Enter an album ID to see its information
+        </p>
+      </section>
+    </main>
+  </body>
+
+  <script src="scripts/script.js"></script>
+</html>
