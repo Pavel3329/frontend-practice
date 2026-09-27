@@ -19,22 +19,33 @@ const filterButtons = document.querySelectorAll(".split-button__button");
 // задачи из localStorage
 const todos = JSON.parse(localStorage.getItem("todos")) || [
   {
-    description: "Покормить кошку",
+    description: "Покормить кота",
     date: "2026-01-10T11:30",
     completed: true,
   },
   {
-    description: "Покормить кошку",
+    description: "Убедить кота, что 6 утра — это не время для концертов",
+    date: "2026-01-10T11:30",
+    completed: false,
+  },
+
+  {
+    description: "Покормить кота. Снова. Он говорит, что не ел",
     date: "2026-01-10T11:30",
     completed: false,
   },
   {
-    description: "Покормить кошку",
+    description: "Проверить холодильник. Закрыть холодильник. Проверить снова",
     date: "2026-01-10T11:30",
     completed: false,
   },
   {
-    description: "Покормить кошку",
+    description: "Попрыгать на батуте",
+    date: "2026-01-10T11:30",
+    completed: false,
+  },
+  {
+    description: "Убрать со стола. Переложить на другой стол",
     date: "2026-01-10T11:30",
     completed: false,
   },

@@ -1,0 +1,110 @@
+@use "../variables/globals" as *;
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+
+  list-style: none;
+}
+
+.todo-block {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 62px;
+
+  padding: 8px 12px 8px 8px;
+
+  background-color: $main-accent-color;
+
+  border-radius: 12px;
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+  }
+
+  &__date {
+    font-size: 12px;
+    line-height: 16px;
+
+    color: $border-color;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 20px;
+
+    font-weight: 400;
+  }
+}
+
+.checkbox {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid $secondary-text-color;
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    transition: all 0.15s linear;
+
+    &:checked {
+      background-color: $second-accent-color;
+      border-color: $second-accent-color;
+    }
+  }
+
+  &__check-icon {
+    position: absolute;
+
+    pointer-events: none;
+
+    font-size: 18px !important;
+
+    color: $primary-dark;
+
+    opacity: 0;
+
+    transition: all 0.15s linear;
+  }
+
+  &:has(input[type="checkbox"]:checked) {
+    .checkbox__check-icon {
+      opacity: 1;
+    }
+  }
+}
+
+.todo-block {
+  &:has(input[type="checkbox"]:checked) {
+    .todo-block__data {
+      color: rgba(29, 27, 30, 0.45);
+
+      text-decoration: line-through;
+    }
+  }
+}
