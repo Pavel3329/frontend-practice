@@ -28,7 +28,7 @@ closeModalBtn.addEventListener("click", closeModal);
 // закрытие по кнопке accept
 acceptBtn.addEventListener("click", closeModal);
 
-// -- закрытие по Escape --
+//  закрытие по Esc
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !modal.classList.contains("modalHidden")) {
     closeModal();
