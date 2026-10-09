@@ -2,10 +2,13 @@ const openModalBtn = document.querySelector(".openModalBtn");
 
 const modal = document.querySelector(".modal");
 const modalBody = document.querySelector(".modalBody");
-
 const closeModalBtn = document.querySelector(".closeModalBtn");
 
 const registrationForm = document.querySelector(".registrationForm");
+
+const confirmModal = document.querySelector(".confirmModal");
+const confirmModalBody = document.querySelector(".confirmModalBody");
+const confirmBtn = document.querySelector(".confirmBtn");
 
 const openModal = () => {
   modal.classList.remove("modalHidden");
@@ -15,27 +18,55 @@ const closeModal = () => {
   modal.classList.add("modalHidden");
 };
 
+const openConfirmModal = () => {
+  confirmModal.classList.remove("modalHidden");
+};
+
+const closeConfirmModal = () => {
+  confirmModal.classList.add("modalHidden");
+};
+
 openModalBtn.addEventListener("click", openModal);
 
-// закрытие по крестику
+// закрытие первой модалки по крестику
 closeModalBtn.addEventListener("click", closeModal);
 
-// закрытие по клику на фон
+// закрытие первой модалки по фону
 modal.addEventListener("click", closeModal);
 
-// не закрывать при клике внутри modalBody
+// не закрывать первую модалку при клике внутри
 modalBody.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
-// регистрация
 registrationForm.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  openConfirmModal();
 });
 
-// закрытие по Esc
+confirmBtn.addEventListener("click", closeConfirmModal);
+
+// закрытие второй модалки по фону
+confirmModal.addEventListener("click", closeConfirmModal);
+
+// не закрывать вторую модалку при клике внутри
+confirmModalBody.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+// закрытие по Escape
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && !modal.classList.contains("modalHidden")) {
+  if (event.key !== "Escape") {
+    return;
+  }
+
+  if (!confirmModal.classList.contains("modalHidden")) {
+    closeConfirmModal();
+    return;
+  }
+
+  if (!modal.classList.contains("modalHidden")) {
     closeModal();
   }
 });
