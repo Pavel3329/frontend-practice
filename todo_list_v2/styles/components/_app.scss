@@ -1,0 +1,17 @@
+.app {
+  position: relative;
+
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+
+  margin: 0 auto;
+
+  padding: 16px 16px 90px;
+}
+
+@media (max-width: 360px) {
+  .app {
+    padding-inline: 12px;
+  }
+}

@@ -1,0 +1,20 @@
+.header-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  margin-bottom: 16px;
+}
+
+.main-header {
+  font-size: 20px;
+  line-height: 28px;
+
+  font-weight: 500;
+}
+
+.header-group__sub-header {
+  font-size: 14px;
+  line-height: 20px;
+}
