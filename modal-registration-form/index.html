@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <button class="openModalBtn">Open modal</button>
+
+    <!-- Первая модалка -->
+    <div class="modal modalHidden">
+      <div class="modalBody">
+        <button class="closeModalBtn" aria-label="Закрыть">✕</button>
+
+        <h3>Регистрация</h3>
+
+        <form class="registrationForm">
+          <input type="text" placeholder="Имя" />
+          <input type="text" placeholder="Фамилия" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Пароль" />
+
+          <button type="submit">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Вторая модалка -->
+    <div class="confirmModal modalHidden">
+      <div class="confirmModalBody">
+        <h3>Подтверждение</h3>
+
+        <p>Вы действительно хотите зарегистрироваться?</p>
+
+        <button class="confirmBtn">Подтвердить</button>
+      </div>
+    </div>
+  </body>
+
+  <script src="scripts/script.js"></script>
+</html>
