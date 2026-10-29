@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+  background: #f3f6fb;
+}
+
+.orderApp {
+  width: 360px;
+}
+
+.orderForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #dce3ed;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+}
+
+.orderForm h2 {
+  margin: 0 0 6px;
+  font-size: 24px;
+}
+
+.orderForm input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.orderForm button,
+.orderButtons button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #0ea5e9;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.orderForm button:hover,
+.orderButtons button:hover {
+  background: #0284c7;
+}
+
+.orderButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.hidden {
+  display: none;
+}
+
+.notificationContainer {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 340px;
+  z-index: 10;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+  animation: slideIn 0.3s ease;
+}
+
+.notification__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1f2937;
+  font-size: 18px;
+}
+
+.notification__content {
+  flex: 1;
+}
+
+.notification__title {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.notification__message {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.notification__close {
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.notification--success {
+  background: #16a34a;
+}
+
+.notification--info {
+  background: #0284c7;
+}
+
+.notification--warning {
+  background: #d99b12;
+}
+
+.notification--error {
+  background: #dc2626;
+}
